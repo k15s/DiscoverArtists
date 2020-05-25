@@ -1,0 +1,125 @@
+#login {
+    width: 800px;
+    height: 410px;
+    position: relative;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    overflow: auto;
+    text-align: center;
+}
+
+#body {
+    background: url(../images/bluegradient.png) repeat-x;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*DISCOVER ARTISTS header*/
+#appname {
+    color: #FFFFFF;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+/*header listing login instructions*/
+#instructions {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+    color: #FFFFFF;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+}
+
+/*header for the disclaimer below the button*/
+#disclaimer {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+    font-style: italic;
+    color: #FFFFFF;
+    font-weight: 100;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+/*header message for bad user account input*/
+.errormessage {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    color: #CD0000;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+}
+
+/*button on login page*/
+#button {
+    width: 220px;
+    border: solid #525252 10px
+}
+.emailbutton {
+    height: 40px;
+    background-color: #525252;
+    margin-top: 15px;
+    border-radius: 4px;
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px;
+    color: #E8E8E8;
+    font-weight: 500;
+    text-align: center;
+}
+.emailbutton.hover {
+    color: #FFFFFF;
+}
+
+.signupbutton {
+    height: 40px;
+    background-color: #1C86EE;
+    margin-top: 15px;
+    border-radius: 4px;
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px;
+    color: #E8E8E8;
+    line-height: 6px;
+    font-weight: 500;
+    text-align: center;
+    border: solid #1C86EE 10px
+
+}
+
+/*textual input*/
+#textualinput {
+    height: 30px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+
+*::-webkit-input-placeholder {
+    color: #999999;
+}
+
+*:-moz-placeholder {
+    color: #999999;
+}
+
+*:-ms-input-placeholder {
+    /* IE10+ */
+    color: #999999;
+}

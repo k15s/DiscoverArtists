@@ -1,0 +1,1399 @@
+#header {
+    color: #FFFFFF;
+}
+
+#headercontainer {
+    height: 46px;
+    width: 802px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* dark bar at top of screen containing menu */
+.navbar-inner {
+    height: 44px;
+    min-width: 1000px;
+    max-height: 60px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+/*navbar options to create a new playlist, etc.*/
+.navbar .nav>li>a {
+    padding: 10px 8px 5px;
+}
+
+#centermenudiv {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    width: 1110px;
+}
+
+.headerlistcontainer {
+    float: left;
+    width: 475px;
+}
+
+/* Artist Finder brand name j*/
+.brand.appname {
+    padding: 3px 20px 10px;
+    top: 13px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    cursor: default;
+}
+
+/*div at top of screen that holds everything in interface*/
+#headerdiv {
+    background-color: #1b1b1b; 
+    position: relative;
+    background-color: #1b1b1b;
+    background-image: -moz-linear-gradient(top, #222222, #111111);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+    background-image: -webkit-linear-gradient(top, #222222, #111111);
+    background-image: -o-linear-gradient(top, #222222, #111111);
+    background-image: linear-gradient(to bottom, #222222, #111111);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+    border-color: #252525;
+    margin-bottom: 0px;
+    min-width: 1100px;
+}
+
+/* link at top of page */
+.headerlink {
+    top: 9px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 3px;
+    font: 12px Lato-Light, Verdana, sans-serif;
+}
+.headerlink.clicked {
+    /*font-color: #000;*/
+    position: fixed;
+    font-size: 13px;
+    top: 3px;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+    min-width: 1200px;
+    height: 45px;
+    min-height: 45px;
+    max-height: 45px;
+}
+
+.nav-collapse.collapse {
+    min-width: 1000px;
+}
+
+#linkslist {
+    height: 45px;
+    max-height: 45px;
+}
+
+.toplink {
+    margin-top: 2px;
+}
+
+/* name of web app at top left */
+.appname {
+    top: 10px;
+    position: relative;
+    float: left;
+}
+
+.container {
+    min-width: 1000px;
+    height: 60px;
+    max-height: 60px;
+}
+
+/*div that contains recommended artists and playlists stuff*/
+#fullbodycontainer {
+    width: 100%;
+    min-width: 1100px;
+    height: 100%;
+}
+
+/* div that contains artist selection(s) */
+#selectioncontainer {
+    position: absolute;
+    top: 45px;
+    height: 100px;
+    min-height: 96px;
+    width: 100%;
+    min-width: 1100px;
+    /* permit divs to keep on going inside container */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background: transparent -webkit-gradient(linear,0 0,0 100%, color-stop(0,rgba(99,99,99,0.8)), color-stop(0.3,rgba(34,36,36,0.8)), color-stop(0.8,rgba(13,15,10,0.9)), color-stop(1,rgba(0,0,0,0.8))) top left no-repeat;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* "entire" scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+/* Track: background track that slider slides on */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    -webkit-border-radius: 6px;
+    border-radius: 10px;
+}
+
+/* Handle: slider itself */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    background: rgba(30, 30, 30, 1); /*color of slider*/
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 1);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(100, 100, 100, 0.4);
+}
+
+/* "entire" scrollbar */
+#selectioncontainer::-webkit-scrollbar {
+    height: 9px; /* height since selection container has horizontal scroll */
+}
+
+/* Track: background track that slider slides on */
+#selectioncontainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+    -webkit-border-radius: 6px;
+    border-radius: 10px;
+}
+
+/* Handle: slider itself */
+#selectioncontainer::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    background: rgba(200, 200, 200, 1); /*color of slider*/
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 1);
+}
+#selectioncontainer::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(100, 100, 100, 0.4);
+}
+
+/* Track: background track that slider slides on */
+.tablecontainer::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+    -webkit-border-radius: 6px;
+    border-radius: 10px;
+    background: rgba(30, 30, 30, 1);
+}
+
+/* Handle: slider itself */
+.tablecontainer::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    background: rgba(200, 200, 200, 1); /*color of slider*/
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 1);
+}
+.tablecontainer::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(100, 100, 100, 0.4);
+}
+
+/* Track: background track that slider slides on */
+.youtubeplaylistdiv::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+    -webkit-border-radius: 6px;
+    border-radius: 10px;
+    background: rgba(30, 30, 30, 1);
+}
+
+/* Handle: slider itself */
+.youtubeplaylistdiv::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    background: rgba(200, 200, 200, 1); /*color of slider*/
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 1);
+}
+.youtubeplaylistdiv::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(100, 100, 100, 0.4);
+}
+
+/* single div that holds both span and usern input text box */
+.input-prepend {
+    width: 200px;
+    min-width: 200px;
+    height: 38px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-top: 1px;
+}
+
+/* span label next to input */
+#artistlabel {
+    width: 90px;
+    min-width: 90px;
+    font-size: 15px;
+    height: 25px;
+    min-height: 25px;
+    text-align: center;
+}
+
+/* header storing name of artist */
+.artistname {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* paragraph containing artist bio */
+.artistbio {
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+/* textbox to input artist name */
+#artistinput {
+    width: 130px;
+    font-size: 17px;
+    background-color: #292929;
+    border: solid 3px #292929;
+    color: #B8B8B8;
+    border-radius: 3px;
+}
+
+#searchbox {
+    height: 100%;
+}
+
+/* search icon to right of search bar */
+.searchbtn {
+    cursor: auto;
+    width: 40px;
+    height: 36px;
+    margin-top: 5px;
+    background-image: url("../images/search-icon.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: #292929;
+    border: solid 3px #292929;
+}
+
+.playlistcontainer {
+    width: 638px;
+    max-width: 730px;
+    float: left;
+    height: 100%;
+    position: relative;
+    min-width: 500px;
+    opacity: 1.0;
+}
+
+.playlistcontainer.hidden {
+    opacity: 0.0;
+}
+
+/* div that contains table */
+.tablecontainer {
+    border-radius: 1px;
+    top: 40px;
+    width: 640px;
+    height: 90%;
+    position: absolute;
+    overflow: auto;
+    background: #fff url('../images/emptyrow.png') top left repeat;
+    background-size: 10px;
+}
+
+/* div that contains artist info */
+.infocontainer {
+    width: 500px;
+    overflow: auto;
+    opacity: 1.0;
+    top: 130px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #282828;
+    color: #FFFFFF;
+    display: inline-block;
+    border: solid 0.7em #969696;
+    border-radius: 1em;
+}
+
+.infocontainer.hidden {
+    opacity: 0;
+}
+
+#playlistbackground {
+    width: 100%;
+    height: 110%;
+    background-color: #000;
+    background-size: 170%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/cageblur.png");
+    filter: blur(50px) opacity(0.2);
+    -webkit-filter: blur(50px) opacity(0.2);
+    -moz-filter: blur(50px) opacity(0.2);
+    -o-filter: blur(50px) opacity(0.2);
+    -ms-filter: blur(50px) opacity(0.2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    position: absolute;
+    top: 0;
+}
+
+#body {
+    font: Lato-Light, Verdana, sans-serif;
+    width: 100%;
+    min-width: 1100px;
+    background-color: #ececec;
+}
+
+/* div in body containing all 3 big divs */
+#container {
+    overflow: hidden;
+    width: 1040px;
+    top: 130px;
+    min-height: 300px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    clear: both;
+}
+
+/* div that contains youtube player embedded */
+#youtubecontainer {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    position: relative;
+    background-image: url("../images/youtubelogo.png");
+    background-size: 126%;
+    background-position: 44% 0%;
+    background-repeat: no-repeat;
+}
+
+/* div that contains youtube player and playlist */
+#video {
+    width: 400px;
+    height: 280px;
+    min-width: 400px;
+    min-height: 100px;
+    float: left;
+    position: relative;
+}
+
+/* table containing songs */
+.topsongstable {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 1.0;
+    min-width: 600px;
+    table-layout: fixed;
+}
+
+.topsongstable.hidden {
+    opacity: 0;
+}
+
+.topsongslist {
+    width: 100%;
+    overflow: auto;
+    height: 100%;
+    opacity: 1.0;
+}
+
+/* song name in table of top songs */
+.topsong.name {
+    width: 190px;
+    overflow: hidden;
+    whitespace: nowrap;
+    font-size: 14px;
+}
+
+/* song name hovered over */
+.topsong.name.hover {
+    text-decoration: underline;
+}
+
+.topsong.artist.hover {
+    text-decoration: underline;
+}
+
+/* table element song album name */
+.topsong.album {
+    width: 150px;
+    font-size: 14px;
+}
+
+/* song album hovered over */
+.topsong.album.hover {
+    text-decoration: underline;
+}
+
+.topsong.add {
+    width: 70px;
+}
+.topsong.playlater {
+    width: 52px;
+}
+.topsong.search {
+    width: 68px;
+}
+
+.songstable {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 1.0;
+    min-width: 600px;
+    table-layout: fixed;
+}
+.song.name {
+    width: 200px;
+    overflow: hidden;
+    whitespace: nowrap;
+}
+.song.name.hover {
+    text-decoration: underline;
+}
+
+.song.add {
+    width: 70px;
+}
+
+.song.playlater {
+    width: 52px;
+}
+
+.song.search {
+    width: 68px;
+}
+
+.song.artist {
+    width: 192px;
+}
+.song.artist.hover {
+    text-decoration: underline;
+}
+
+/* entire table row containing top song information */
+.songtablerow {
+    color: #BDBDBD;
+    background-color: #242424;
+    overflow: auto;
+    height: 24px;
+    /*background: rgba(50, 50, 50, 0.8);*/
+}
+
+/* entire table row is clicked on */
+.songtablerow.clicked {
+    color: #FFFFFF;
+    background-color: #1C86EE;
+}
+
+/* .clicked alone won't work since there are other selections using
+ * .songtablerow alone to color the background, overwriting this one, so 
+ * we have to chain css selectors */
+.songtablerow.alternate.clicked {
+    color: #FFFFFF;
+    background-color: #1C86EE;
+}
+
+/* entire table row alternate shading */
+.songtablerow.alternate {
+    background-color: #171717;
+    /*background: rgba(60, 60, 60, 0.8);*/
+}
+
+/* entire table row when hovered over */
+.songtablerow.hover {
+    color: #000000;
+    background-color: #BFEFFF;
+    /*background: rgba(30, 30, 30, 0.7);*/
+    cursor: pointer;
+}
+
+/* iframe containing youtube player embedded */
+#player {
+    width: 100%;
+    height: 100%;
+}
+
+/* div containing larger artist image */
+.imagecontainer {
+    opacity: 1.0;
+    position: fixed;
+    top: 250px;
+    left: 50%;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    background-color: #f3f3f3;
+    display: inline-block; /* unspecified width and height so div wraps around image*/
+    border: solid 0.6em #181818;
+    border-radius: 0.3em;
+}
+
+/* hidden larger artist image */
+.imagecontainer.hidden {
+    opacity: 0;
+}
+
+/* close icon at corner of artist bio */
+#infocontainerclose {
+    color: #FFFFFF;
+    position: absolute;
+    margin-left: 97%;
+}
+
+/*a tag containing smaller artist img displayed on main page */
+#refartistimage {
+    float: left;
+    margin-right: 15px;
+}
+
+/* artist thumbnail image - styling makes it automatically fill div */
+.artistimage {
+    width: 96px;
+    height: 100%;
+}
+
+/* play button over artist suggestion */
+.playbutton {
+    display: block;
+    width: 64px;
+    height: 54px;
+    cursor: pointer;
+    position: absolute;
+    background-image: url("../images/button-play.png");
+    /*background-position-x: initial;*/
+    /*background-position-y: initial;*/
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    left: 23%;
+}
+
+.playbutton.hidden {
+    opacity: 0;
+}
+
+.playbutton.partial {
+    opacity: 0.5;
+}
+
+.playbutton.hover {
+    opacity: 1.0;
+}
+
+/* div containing playlist of songs for youtube */
+.youtubeplaylistdiv {
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    height: 100%;
+}
+
+/* playlist of songs in unordered list */
+.playlist {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* div containg song info alone inside playlist */
+.songlisting {
+    overflow: auto;
+}
+
+/* li tag containing div with song info, youtube playlist */
+.song.li {
+    color: #ADADAD;
+    border-bottom: 1px solid #3d3d3d;
+    background-color: #242424;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.song.li.hover {
+    /*background-color: #BFEFFF;*/
+    background: rgba(40, 130, 190, 0.9);
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.song.li.clicked {
+    /*background-color: #1E90FF;*/
+    background: rgba(30, 80, 180, 0.9);
+    box-shadow: inset 0 0 7px #FFFFFF;
+    color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+/* small artist thumbnail at top of page inside selection container */
+.artistthumbnail {
+    background-size: 100%;
+    /*background-color: #585858;*/
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: 100% 100%;
+    background-attachment: initial;
+    background-origin: initial;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    width: 96px;
+    min-width: 96px;
+    height: 94%;
+    /*min-height: 96px;*/
+    box-shadow: 4px 0px 8px #000000;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+/* small div at bottom of each artist thumbnail containing name */
+.artistthumbnailname {
+    position: absolute;
+    top: 54%;
+    height: 40px;
+    background-color: #000000;
+    opacity: 0.8;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.artistthumbnailname.hidden {
+    opacity: 0;
+}
+
+/* button to click on to bring up artist info */
+.getartistinfo {
+    height: 20px;
+    width: 60px;
+    opacity: 1.0;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+/* empty div responsible for making artist thumbnail image darken when hovered over */
+.opacityoverlay {
+    width: 96px;
+    height: 100%;
+    /*min-width: 96px;*/
+    /*min-height: 96px;*/
+    position: absolute;
+}
+.opacityoverlay.hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* header at top of personal playlist */
+.personalplaylistheader {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    float: left;
+    margin-left: 230px;
+}
+.personalplaylistheader.playlistlabel {
+    margin-left: 26px;
+}
+
+#userplaylistcontainer {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    float: left;
+    margin-top: 11px;
+    margin-left: 9px;
+    margin-right: -10px;
+}
+
+/*header corresponding specifically to user's playlist*/
+#userplaylist {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#personalplaylistheadercontainer {
+    width: 100%;
+    text-align: center;
+    border: groove 1px #000;
+    border-radius: 6px 6px 0px 0px;
+    height: 40px;
+    background: transparent -webkit-gradient(linear,0 0,0 100%, color-stop(0,rgba(99,99,99,0.5)), color-stop(0.3,rgba(24,26,26,0.7)), color-stop(0.6,rgba(13,15,10,0.9)), color-stop(1,rgba(0,0,0,0.9))) top left no-repeat
+}
+
+/* div contains new playlist options */
+.newplaylistcontainer {
+    margin-left: -125px;
+    background-color: #111;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 250px;
+    min-width: 250px;
+    height: 140px;
+    min-height: 140px;
+}
+
+.loadplaylisturlcontainer {
+    margin-left: -125px;
+    background-color: #111;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 250px;
+    min-width: 250px;
+    height: 140px;
+    min-height: 140px;
+}
+.loadplaylisturlbutton {
+    background-color: #282828;
+    color: #585858;
+    border: solid 3px #282828;
+    border-radius: 3px;
+    margin-left: 70px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.loadplaylisturlbutton.hover {
+    color: #FFFFFF;
+}
+
+/* input where user enters new playlist name */
+.playlistinput, input[type="text"] {
+    background-color: #000000;
+    color: #BDBDBD;
+    border: solid 1px #282828;
+    border-radius: 1px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+/* button to click to save playlist */
+.newplaylistbutton {
+    background-color: #282828;
+    color: #585858;
+    border: solid 3px #282828;
+    border-radius: 3px;
+    margin-left: 70px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.newplaylistbutton.hover {
+    color: #FFFFFF;
+}
+
+/*button above personal playlist*/
+.playlistbutton {
+    background-color: #282828;
+    color: #B8B8B8;
+    border: solid 3px #282828;
+    border-radius: 3px;
+    position: relative;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.playlistbutton.hover {
+    background-color: #1E1E1E;
+    border: solid 3px #1E1E1E;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+
+#newplaylistclose {
+    color: #FFFFFF;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+/* header at top of popup div */
+.header {
+    color: #BDBDBD;
+    border-bottom: #585858 1px solid;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    padding: 5px 0 10px 5px;
+}
+
+/* div that contains left half of page */
+#lefthalfcontainer {
+    width: 640px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+/* tab that lets user select which playlist to view */
+.playlisttab {
+    color: #B5B5B5;
+    border-bottom: solid 1px #FFFFFF;
+    border-radius: 3px;
+    font-size: 17px;
+    padding: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
+    margin-right: 4px;
+    width: 182px;
+}
+#playlisttablink {
+    color: #B5B5B5;
+    padding: 3px 3px 3px 3px;
+}
+
+.playlisttab.hover {
+    /*background-color: #000;*/
+    /*color: #FFFFFF;*/
+    /*border: solid 3px #212121;*/
+    /*border-radius: 3px;*/
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+    color: #FFFFFF;
+    background-color: #212121;
+    background-image: none;
+}
+
+.playlisttab.click {
+    border: solid 1px #404040;
+    border-radius: 1px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+}
+
+/* div that contains tabs */
+#tabcontainer {
+    /*margin-left: 10px;*/
+    margin-left: 26%;
+}
+
+/* div inside custom playlist's element that contains all song info */
+.songinfo {
+    width: 98%;
+    height: 100%;
+    float: left;
+    position: relative;
+    overflow: auto;
+    display: table;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+}
+
+/* overwrite bootstrap styling to make it look better */
+ul {
+    list-style-type: none;
+    margin: auto;
+}
+
+/* <li> that contains custom playlist song info */
+.playlistrow {
+    color: #ADADAD;
+    background-color: #242424;
+    cursor: pointer;
+    border-bottom: 1px solid #737373;
+    width: 100%;
+    height: 40px;
+    display: inline-table;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    /*background: rgba(50, 50, 50, 0.8);*/
+    /*background: rgba(10, 10, 10, 0.9);*/
+    background: rgba(30, 30, 30, 0.9);
+}
+.playlistrow.hover {
+    /*background-color: #BFEFFF;*/
+    /*background: rgba(30, 30, 100, 0.7);*/
+    background: rgba(40, 130, 190, 0.9);
+    /*background: rgba(60, 60, 60, 0.9);*/
+    color: #FFFFFF;
+}
+.playlistrow.clicked {
+    /*background-color: #1C86EE;*/
+    /*background: rgba(30, 30, 30, 0.9);*/
+    background: rgba(30, 80, 180, 0.9);
+    box-shadow: inset 0 0 7px #FFFFFF;
+    color: #FFFFFF;
+}
+
+.songcontainer {
+    overflow-x: auto;
+    width: 100%;
+    overflow-y: hidden;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+
+/*.songinfospan {*/
+/*display: inline-block;*/
+/*vertical-align: middle;*/
+/*white-space: normal;*/
+/*display: table-row;*/
+/*position: relative;*/
+/*white-space: pre-wrap;*/
+    /*margin-left: 0px;*/
+/*}*/
+/*.songinfospan.songname {*/
+    /*font-size: 14px;*/
+    /*margin-left: 5px;*/
+    /*width: 191px;*/
+/*}*/
+/*.songinfospan.songartist {*/
+    /*width: 180px;*/
+    /*font-size: 14px;*/
+/*}*/
+/*.songinfospan.songalbum {*/
+    /*font-size: 14px;*/
+    /*font-style: oblique;*/
+    /*width: 170px;*/
+/*}*/
+
+/* div inside personal playlist row that contains buttons for song operations */
+.songops {
+    width: 170px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+/* button inside song info within personal playlist */
+.songop {
+    background-color: #383838;
+    color: #949494;
+    border: solid 3px #383838;
+    padding: 2px 2px 2px 2px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.songop.rowhover {
+    background-color: #383838;
+    border: solid 3px #383838;
+}
+.songop.hover {
+    border: solid 3px #2B2B2B;
+    background-color: #2B2B2B;
+    color: #FFFFFF;
+}
+
+.DivParent {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    float: left;
+    position: relative;
+}
+.divVertAlign {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    margin-left: 10px;
+    font: Lato-Light, Verdana, sans-serif;
+}
+.divVertAlign.songname {
+    font-size: 18px;
+    width: 255px;
+    position: absolute;
+    margin-top: -3px;
+}
+.divVertAlign.songartist {
+    width: 255px;
+    font-size: 15px;
+    color: #D4D4D4;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+.divVertAlign.songartist.hover {
+    color: #FFFFFF;
+}
+.divVertAlign.songalbum {
+    font-size: 17px;
+    font-style: oblique;
+    width: 180px;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+
+/*personal playlist song name in <p> */
+.nametext {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.artisttext {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.albumtext {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*table below youtube player*/
+.divVertAlign.youtubesongname {
+    font-size: 15px;
+    /*line-height: 14px;*/
+    width: 130px;
+    position: absolute;
+    margin-top: -1px;
+}
+.youtubenametext {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.divVertAlign.youtubesongartist {
+    width: 120px;
+    font-size: 12px;
+    color: #D4D4D4;
+    margin-top: 20px;
+}
+.youtubeartisttext {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.divVertAlign.youtubesongartist.hover {
+    color: #FFFFFF;
+}
+.divVertAlign.youtubesongalbum {
+    font-size: 13px;
+    font-style: oblique;
+    width: 110px;
+    margin-right: 20px;
+}
+
+#clearplaylistlink {
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    margin-left: 28px;
+    position: relative;
+    float: left;
+    font-size: 17px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    -moz-opacity: .9;
+    filter: alpha(opacity:90);
+    padding: 0 8px;
+    top: 7px;
+    background: transparent -webkit-gradient(linear,0 0,0 100%,color-stop(0.4,#757575),color-stop(0.5,#4F4F4F),color-stop(0.5,#17191e),color-stop(9,#000)) top left no-repeat;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.9);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.9);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.9);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 5px;
+}
+
+/*icon to save playlist*/
+.savelink {
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    margin-left: 9px;
+    position: relative;
+    float: left;
+    font-size: 17px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    -moz-opacity: .9;
+    filter: alpha(opacity:90);
+    padding: 0 8px;
+    top: 7px;
+    background: transparent -webkit-gradient(linear,0 0,0 100%,color-stop(0.4,#757575),color-stop(0.5,#4F4F4F),color-stop(0.5,#17191e),color-stop(9,#000)) top left no-repeat;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.9);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.9);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.9);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 5px;
+}
+.savelink.clicked {
+    background: rgb(0, 0, 0);
+}
+
+/*link to shuffle playlist*/
+.shufflelink {
+    width: 50px;
+    height: 40px;
+    position: relative;
+    display: block;
+    float: right;
+    background-image: url("../images/darkshuffle.png");
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.shufflelink.clicked {
+    background-image: url("../images/whiteshuffle.png");
+}
+
+/*button in album/sub playlist below video player to add song to playlist*/
+.youtubeaddtoplaylist {
+    width: 80px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.youtubesonginfo {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+    overflow: auto;
+    display: table;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.playlistlistingcontainer {
+    top: 30%;
+    height: 350px;
+    overflow: auto;
+    width: 700px;
+    background-color: #000;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    margin-left: -350px;
+    position: absolute;
+    overflow-x: hidden;
+    left: 50%;
+    min-width: 250px;
+}
+.playlistinterfacelabels {
+    overflow: auto;
+}
+.playlistinterfacelabel {
+    color: #FFF;
+    width: 40px;
+    margin-left: 84px;
+    float: left;
+    position: relative;
+    font-size: 16px;
+    line-height: 0px;
+}
+.playlistinterfacelabel.url {
+    margin-left: 135px;
+}
+.playlistlisting {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    display: inline-table;
+}
+.playlistlisting.headers {
+    width: 470px;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: 14px;
+    height: 19px;
+}
+.playlistlisting.buttons {
+    width: 222px;
+    position: relative;
+    float: right;
+    margin-top: 7px;
+}
+.playlistlisting.customheader {
+    font: 14px Lato-Light, Verdana, sans-serif;
+    color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+    width: auto;
+    position: relative;
+    display: block;
+
+}
+
+/*button inside div that lets user view playlists*/
+.playlistdisplaybutton {
+    background-color: #282828;
+    color: #B3B3B3;
+    border: solid 3px #282828;
+    border-radius: 3px;
+    margin-left: 10px;
+    position: relative;
+    font-size: 13px;
+}
+.playlistdisplaybutton.hover {
+    color: #FFFFFF;
+}
+#playlistinterfaceclose {
+    color: #FFFFFF;
+    float: right;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 30px;
+}
+#playlistinterfacelabel {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 10px;
+    font: 23px Lato-Light, Verdana, sans-serif;
+    color: #BDBDBD;
+    border-bottom: #585858 1px solid;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    padding: 5px 0 10px 5px;
+}
+#playlistinterfaceheader {
+    width: 100%;
+    height: 50px;
+}
+#playlistinterfacebackground {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-size: 170%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/cageblur.png");
+    filter: blur(50px) opacity(0.2);
+    -webkit-filter: blur(50px) opacity(0.2);
+    -moz-filter: blur(50px) opacity(0.2);
+    -o-filter: blur(50px) opacity(0.2);
+    -ms-filter: blur(50px) opacity(0.2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    position: absolute;
+    top: 0;
+}
+
+h4 {
+    font: 22px Lato-Light, Verdana, sans-serif;
+}
+tr {
+    font: 15px Lato-Light, Verdana, sans-serif;
+}
+
+li {
+    font-size: 12px;
+}
+
+#btn-group {
+    margin-top: 0px;
+}
+.playlisttabselector {
+    height: 40px;
+    background-color: #383838;
+    color: #FFFFFF;
+}
+#caret {
+    color: #FFFFFF;
+    border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+}
+
+#dropdown-menu {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+#magnify {
+    background-image: url("../images/search-icon.png");
+    width: 30px;
+    height: 30px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
+    background-origin: initial;
+    background-clip: initial;
+    position: absolute;
+}
+#magnifylargerimage {
+    background-image: url("../images/search-icon.png");
+    width: 30px;
+    height: 30px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center;
+    background-origin: initial;
+    background-clip: initial;
+    position: absolute;
+}

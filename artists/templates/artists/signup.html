@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700|Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script><style type="text/css"></style>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'artists/scripts/lastfm.api.cache.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/lastfm.api.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/lastfm.api.md5.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/jsrender.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/jsrender.min.js' %}"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'artists/styles/login.css' %}" />
+
+  </head>
+
+  <body id="body">
+
+    <div id="login">
+      <h6 id="appname">DISCOVER ARTISTS</h6>
+      <h6 id="instructions">
+        Thanks for joining!
+      </h6>
+      <!--no external script, just use "action" and "post" to send data to django-->
+      <form style="margin-top: 20px;" action="/verifynewuser/" method="post">{% csrf_token %} 
+        <!--name=email so that the post request will attach user input to email "attribute name"-->
+        <input type="text" placeholder="Your Account Email" id="textualinput" name="email">
+        <input type="password" placeholder="Your Account Password" id="textualinput" name="password">
+        <input type="submit" id="button" class="emailbutton" value="Discover">
+      </form>
+      <form action="/login/" {% csrf_token %}
+        <input type="submit" id="button" class="emailbutton" value="Back">
+      </form>
+
+      <h6>
+        {% if invalidemail %}
+        {{ email }} in invalid. Try again.
+        {% endif %}
+        {% if invalidpassword %}
+        Password contained invalid character(s). Try again.
+        {% endif %}
+        {% if emailused %}
+        {{ email }} is already in use. Please try another.
+        {% endif %}
+      </h6>
+    </div>
+
+    <script type="text/javascript">
+      var playlisturl = {{ playlisturl|safe }};
+      console.log("got playlisturl: " + playlisturl);
+      //inject the playlist url into the form
+      $('#playlisturl').val(playlisturl);
+    </script>
+
+    <script type="text/javascript" src="{% static 'artists/scripts/signup.js' %}"></script>
+
+  </body>
+</html>
+

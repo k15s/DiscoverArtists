@@ -1,0 +1,158 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,500,700,900' rel='stylesheet' type='text/css'>
+
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script><style type="text/css"></style>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="{% static 'artists/scripts/lastfm.api.cache.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/lastfm.api.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/lastfm.api.md5.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/jsrender.js' %}"></script>
+    <script type="text/javascript" src="{% static 'artists/scripts/jsrender.min.js' %}"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'artists/styles/search.css' %}" />
+
+    <script id="lastfmTemplateArtists" type="text/x-jsrender">
+      <div id="mbid" class="artist">
+        <a href="url" rel="nofollow" target="_blank"><img src=":image[2]["#text"]" alt=":name" /><b>:name:</b></a>
+      </div>
+    </script>
+    <script id="lastfmTemplateArtistInfo" type="text/x-jsrender">
+      <div class="artist_info">
+        <a href="url" rel="nofollow" target="_blank"><b>:name:</b><img src=":image[3]["#text"]" alt=":name" /></a>
+        <div><noindex>
+          :bio.content
+          </noindex>
+        </div>
+      </div>
+    </script>
+      <script id="lastfmTemplateTracks" type="text/x-jsrender">
+        <div id="mbid" class="track">
+          <a href="url" rel="nofollow" target="_blank"><img src=":image[0]["#text"]" /><b>:name:</b></a>
+        </div>
+      </script>
+
+  </head>
+
+  <body id="body">
+
+    <div id="headerdiv" class="navbar navbar-inverse navbar-fixed-top" style="background-color: #1b1b1b; position: relative;">
+      <div class="navbar-inner" style="width: 100%; padding: 0px;">
+        <div id="headercontainer">
+          <!--<div id="centermenudiv">-->
+          <a class="brand appname">Discover.</a>
+          <!--<div class="nav-collapse collapse">-->
+          <div class="headerlistcontainer">
+            <ul id="linkslist" class="nav">
+
+              <li class="toplink">
+                <div id="btn-group" class="btn-group">
+                  <button class="playlisttabselector btn btn-inverse dropdown-toggle" style="width: 108px; font-size: 13px;" data-toggle="dropdown">Playlist View 
+                    <span id="caret" class="caret"></span>
+                  </button>
+                  <ul id="dropdown-menu" class="dropdown-menu">
+                    <li id="PersonalPlaylistTab" class="playlisttab"><a id="playlisttablink" class="playlisttablink" href="#">Personal Playlist</a></li>
+                    <li id="TopSongsTab" class="playlisttab"><a id="playlisttablink" class="playlisttablink" href="#">Artist's Top Songs</a></li>
+                    <li id="SongsTab" class="playlisttab"><a id="playlisttablink" class="playlisttablink" href="#">Song Results</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="toplink"><a id="newplaylistlink" class="headerlink link">New Playlist</a></li>
+              <!--<li class="toplink"><a id="clearplaylistlink" class="headerlink link">Clear Playlist</a></li>-->
+              <li class="toplink"><a id="loadplaylisturllink" class="headerlink link">Load Playlist</a></li>
+              <li class="toplink"><a id="viewplaylistslink" class="headerlink link">Playlist Interface</a></li>
+              <li class="toplink"><a id="logoutlink" class="headerlink link">Log Out</a></li>
+            </ul>
+          </div>
+          <div class="input-prepend">
+              <input class="span2 input" id="artistinput" type="text" placeholder="Artist Name">
+              <button id="searchbtn"  class="searchbtn"></button>
+            </div>
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+
+    <div id="fullbodycontainer">
+
+      <div id="selectioncontainer"></div>
+
+      <!--container of all necessary divs to make horizontal alignment easier-->
+      <div id="container">
+
+
+        <div id="lefthalfcontainer">
+
+          <div id="personalplaylistcontainer" class="playlistcontainer hidden">
+            <div id="personalplaylistheadercontainer">
+              <center>
+                <div style="width: 200px;" id="userplaylistcontainer">
+                  <p id="userplaylist"></p>
+                </div>
+                <h6 style="width: 210px;" class="personalplaylistheader playlistlabel">PERSONAL PLAYLIST</h6>
+              </center>
+              <p id="clearplaylistlink">Clear</p>
+              <p class="savelink">Save</p>
+              <div class="shufflelink"></div>
+            </div>
+            <div class="tablecontainer"></div>
+          </div>
+
+          <div id="topsongsouterdiv" class="playlistcontainer">
+            <div id="personalplaylistheadercontainer">
+              <h6 class="personalplaylistheader">ARTIST'S TOP SONGS</h6>
+            </div>
+            <div class="tablecontainer" id="topsongscontainer"></div>
+          </div>
+
+          <div id="songsouterdiv" class="playlistcontainer hidden">
+            <div id="personalplaylistheadercontainer">
+              <h6 class="personalplaylistheader" style="margin-left: 260px;">FOUND SONGS</h6>
+            </div>
+            <div class="tablecontainer" id="songscontainer">
+              <table class="songstable" id="songs">
+                <tbody class="songsbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="video">
+          <!--use swfobject to embed <object> player instead of <iframe> - 
+              object is more reliable-->
+            <script type="text/javascript" src={% static 'artists/scripts/swfobject.js' %}></script>
+            <!--div to be replaced by embedded player-->
+            <div id="youtubecontainer"></div>
+          </div>
+        </div>
+
+        <div style="clear: both"></div>
+
+      </div>
+
+      <!--The search function in views.py parses the email from the user's input 
+      at the login screen and sends it back in the render response - We can grab 
+      that email value through the script below, which is of global scope so 
+      search.js can also access the "email" var-->
+      <script type="text/javascript">
+        var email = "{{ email }}";
+        var playlisturl = {{ playlisturl|safe }};
+      </script>
+      <script type="text/javascript" src="{% static 'artists/scripts/search.js' %}"></script>
+  </body>
+</html>
+
